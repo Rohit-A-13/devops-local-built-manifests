@@ -1,0 +1,18 @@
+# Reduce resource footprint for local Minikube
+alertmanager:
+  enabled: false
+
+prometheus:
+  prometheusSpec:
+    # This is the magic setting that allows Prometheus to find ArgoCD's metrics
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorNamespaceSelector: {}
+    resources:
+      requests:
+        memory: 400Mi
+
+grafana:
+  service:
+    type: NodePort
+    nodePort: 30000
+  adminPassword: admin
