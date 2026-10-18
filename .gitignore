@@ -1,0 +1,15 @@
+# Terraform
+terraform-platform/.terraform/
+terraform-platform/.terraform.lock.hcl
+terraform-platform/terraform.tfstate
+terraform-platform/terraform.tfstate.backup
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Secrets
+*.pem
+*.key
+.env
